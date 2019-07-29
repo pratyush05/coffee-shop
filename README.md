@@ -6,7 +6,7 @@
 3. Start the application using `java -jar build/libs/coffee-shop-0.0.1.jar`
 
 ##### Sample example:
-java -jar build/libs/coffee-shop-0.0.1.jar  
+`java -jar build/libs/coffee-shop-0.0.1.jar  
 Hola!  
 Select coffee grind (FINE, MEDIUM, COARSE) and roast (ENGLAND, AMERICAN, ITALIAN, FRENCH)  
 coarse  
@@ -37,4 +37,4 @@ Throwing away filter
 ********************  Brewing ended  ********************  
   
 Order is: Cappuccino ($20.0), Milk ($10.0), Soy ($13.5), Soy ($13.5), Whip ($20.0), Mocha ($15.0), Mocha ($15.0)  
-Cost is: $147.0  
+Cost is: $147.0  `
