@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+description = 'This is a basic coffee shop software showcasing multiple design patterns.'
+group = 'com.pratyush'
+sourceCompatibility = 1.11
+version = '0.0.1'
+project.ext.author = 'Pratyush Gupta'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('junit:junit:4.12')
+}
+
+application {
+    applicationName = 'CoffeeShop'
+    mainClassName = 'com.pratyush.main.Main'
+}
+
+jar {
+    baseName(project.getName())
+    manifest {
+        attributes(
+                'Build-Jdk': "${System.properties['java.vendor']} ${System.properties['java.version']}",
+                'Built-By': 'Pratyush Gupta',
+                'Gradle-Version': gradle.getGradleVersion(),
+                'Main-Class': application.getMainClassName()
+        )
+    }
+    version(project.getVersion().toString())
+}
+
+run {
+    main = application.getMainClassName()
+    standardInput = System.in
+}
